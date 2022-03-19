@@ -56,11 +56,10 @@ h3 {
 }
 
 .section {
+  position: relative;
   max-width: 1440px;
   margin: 0 auto;
   padding: 100px 0;
-
-  overflow: hidden;
 }
 
 .container {
@@ -119,7 +118,7 @@ h3 {
 
 .section-video p {
   margin-top: 30px;
-  margin-bottom: 515px;
+  margin-bottom: 415px;
 }
 
 .header-text p:first-child {
@@ -140,8 +139,6 @@ h3 {
 }
 
 .section-video {
-  position: relative;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -160,11 +157,19 @@ h3 {
 }
 
 .video {
+  display: block;
   position: absolute;
   top: 329px;
   left: 261px;
+  /* bottom: -100px; */
 
   border: 0;
 
   filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.15));
+  z-index: 100;
+}
+
+.navigation {
+  background-color: var(--base-dark-color);
+  z-index: 10;
 }
