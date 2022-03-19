@@ -83,8 +83,9 @@ h3 {
 
   background-image: url("../assets/img/background.png");
   background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0.9;
+  background-size: contain;
+  background-position: 33px 0;
+  opacity: 0.2;
 
   content: "";
 }
