@@ -1,19 +1,45 @@
 /** CSS STYLE **/
+@font-face {
+  font-family: "Neucha";
+  src: url("../assets/fonts/Neucha-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../assets/fonts/OpenSans-Regular.ttf");
+}
+
+:root {
+  /* Colors */
+  --white: #fff;
+  --translucent-white: #d7ccc0;
+  --light: #f5f4f0;
+  --base-color: #fe8a02;
+  --base-dark-color: #42413c;
+  --dark: #2a2626;
+  --translucent-dark: #908d8b;
+  --brown: #b09a81;
+  --blue: #1085c5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
 
-  color: #2a2626;
+  color: var(--dark);
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
   line-height: 1.6em;
-
-  background-color: #fff;
 }
 
 h1,
 h2,
 h3 {
+  font-family: "Neucha", "Open Sans", sans-serif;
   line-height: 1.2em;
 }
 
@@ -29,8 +55,80 @@ h3 {
   font-size: 34px;
 }
 
-.content {
-  max-width: 1110px;
+.section {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 100px 0;
 
-  text-align: center;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+
+  width: 1110px;
+  margin: 0 165px;
+}
+
+.header {
+  position: relative;
+}
+
+.header::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  background-image: url("../assets/img/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.9;
+
+  content: "";
+}
+
+.title-header {
+  margin: 0;
+  margin-bottom: 199px;
+}
+
+.title-header span {
+  color: var(--base-color);
+}
+
+.header-img {
+  position: absolute;
+  top: -44px;
+  right: -163px;
+
+  height: 525px;
+}
+
+.header-text {
+  column-count: 2;
+  column-gap: 30px;
+  column-width: 540px;
+}
+
+.header-text p {
+  margin-top: 0;
+}
+
+.header-text p:first-child {
+  break-after: column;
+}
+
+.header-btn {
+  display: inline-block;
+  margin-top: 22px;
+  padding: 12px 24px;
+
+  color: var(--white);
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background-color: var(--base-color);
 }
